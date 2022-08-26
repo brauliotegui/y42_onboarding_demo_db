@@ -1,0 +1,17 @@
+{
+  "$schema": "https://s.y42.com/integrations/file-upload/0.0.0/source.json#csv",
+  "content-type": "text/csv",
+  "uploadTarget": "https://storage.googleapis.com/upload/storage/v1/b/y42_onboardingdemo_4b3259cb30fa48ac8710c53e6a9d9a3b/o?uploadType=resumable&upload_id=ADPycdsTPhmM5uqqwUyCTFQULpD74q8tVPvqJhv6NRkldgShryjTNYNjm0Wln_Y8edgtFTJCzDM_AiYW750aBbFp-btHw_oezvog",
+  "originalName": "google_ads_mock_data.csv",
+  "size": "7574198",
+  "uri": "gs://y42_onboardingdemo_4b3259cb30fa48ac8710c53e6a9d9a3b/userUploads/v2/50/file-upload/19d1e4f1-2fbc-4a12-b520-cfb1445257c9",
+  "csv_options": {
+    "field_delimiter": ",",
+    "allow_quoted_new_lines": true,
+    "null_marker": "",
+    "ignore_unknown_values": false,
+    "encoding": "UTF-8",
+    "quote": "\"",
+    "skip_leading_rows": null
+  }
+}
