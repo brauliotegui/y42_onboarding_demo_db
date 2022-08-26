@@ -1,5 +1,562 @@
 {
-  "nodeDataArray": [],
-  "linkDataArray": [],
+  "nodeDataArray": [
+    {
+      "key": "4293906f-3cb8-4560-b0cd-f28033878dca",
+      "type": "INPUT",
+      "category": "INPUT",
+      "transformationStep": {
+        "id": "4293906f-3cb8-4560-b0cd-f28033878dca",
+        "title": "src/Integrations/Facebook_ads/fb_ads_mock_data.csv",
+        "transformationType": "INPUT",
+        "datasourceName": "Facebook Ads",
+        "transformObject": {
+          "source": "src/Integrations/Facebook_Ads",
+          "table": "src/Integrations/Facebook_Ads/fb_ads_mock_data.csv",
+          "lang": ""
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-736.8272612534258 -227.57564369634747"
+    },
+    {
+      "key": "e60df9cd-d72a-4504-810c-c46df0ddedae",
+      "type": "INPUT",
+      "category": "INPUT",
+      "transformationStep": {
+        "id": "e60df9cd-d72a-4504-810c-c46df0ddedae",
+        "title": "src/Integrations/Google_Ads/google_ads_mock_data.csv",
+        "transformationType": "INPUT",
+        "datasourceName": "Google Ads",
+        "transformObject": {
+          "source": "src/Integrations/Google_Ads",
+          "table": "src/Integrations/Google_Ads/google_ads_mock_data.csv",
+          "lang": ""
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-732.8272612534258 -66.87753048880029"
+    },
+    {
+      "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+      "type": "FIELDS",
+      "category": "FIELDS",
+      "transformationStep": {
+        "id": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+        "title": "",
+        "transformationType": "FIELDS",
+        "transformObject": [
+          {
+            "target": "day",
+            "source": "date_start",
+            "type": "TIMESTAMP",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          },
+          {
+            "target": "adgroup",
+            "source": "adset_name",
+            "type": "STRING",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          },
+          {
+            "target": "campaign",
+            "source": "campaign_name",
+            "type": "STRING",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          },
+          {
+            "target": "cost",
+            "source": "spend",
+            "type": "FLOAT",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          }
+        ]
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-481.9630637225616 -227.82092671521542"
+    },
+    {
+      "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+      "type": "FIELDS",
+      "category": "FIELDS",
+      "transformationStep": {
+        "id": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+        "title": "",
+        "transformationType": "FIELDS",
+        "transformObject": [
+          {
+            "target": "ad_id",
+            "source": "adid",
+            "type": "STRING",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          },
+          {
+            "target": "account_id",
+            "source": "account",
+            "type": "STRING",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          }
+        ]
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-486.55565631515424 -67.34922860200788"
+    },
+    {
+      "key": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
+      "type": "UNION",
+      "category": "UNION",
+      "transformationStep": {
+        "id": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
+        "title": "",
+        "transformationType": "UNION",
+        "transformObject": {
+          "fields": [
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "day",
+              "source": "day",
+              "type": "TIMESTAMP",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "adgroup",
+              "source": "adgroup",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "campaign",
+              "source": "campaign",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "cost",
+              "source": "cost",
+              "type": "FLOAT",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "account_id",
+              "source": "account_id",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "ad_id",
+              "source": "ad_id",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "clicks",
+              "source": "clicks",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "ctr",
+              "source": "ctr",
+              "type": "FLOAT",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "impressions",
+              "source": "impressions",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+              "target": "reach",
+              "source": "reach",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "day",
+              "source": "day",
+              "type": "DATE",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "adgroup",
+              "source": "adgroup",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "campaign",
+              "source": "campaign",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "cost",
+              "source": "cost",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "account_id",
+              "source": "account_id",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "ad_id",
+              "source": "ad_id",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "clicks",
+              "source": "clicks",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "impressions",
+              "source": "impressions",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "adtype",
+              "source": "adtype",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "engagements",
+              "source": "engagements",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "interactions",
+              "source": "interactions",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+              "target": "views",
+              "source": "views",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            }
+          ],
+          "tables": [
+            "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+            "64ac3ff8-6ac1-4bb1-b1dd-46d646679728"
+          ]
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-168.28405137688264 -151.02847388502676"
+    },
+    {
+      "key": "d754ee17-4125-4ff6-bed3-7347d290c1f0",
+      "type": "OUTPUT",
+      "category": "OUTPUT",
+      "transformationStep": {
+        "id": "d754ee17-4125-4ff6-bed3-7347d290c1f0",
+        "title": "marketing_anl",
+        "transformationType": "OUTPUT",
+        "transformObject": {
+          "name": "marketing_anl",
+          "fields": [
+            {
+              "target": "day",
+              "source": "day",
+              "type": "TIMESTAMP",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": true
+            },
+            {
+              "target": "adgroup",
+              "source": "adgroup",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "campaign",
+              "source": "campaign",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "cost",
+              "source": "cost",
+              "type": "FLOAT",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": true
+            },
+            {
+              "target": "account_id",
+              "source": "account_id",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "ad_id",
+              "source": "ad_id",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "clicks",
+              "source": "clicks",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "ctr",
+              "source": "ctr",
+              "type": "FLOAT",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "impressions",
+              "source": "impressions",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "reach",
+              "source": "reach",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "adtype",
+              "source": "adtype",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "engagements",
+              "source": "engagements",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "interactions",
+              "source": "interactions",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "views",
+              "source": "views",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            }
+          ]
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "106.90113380830235 -150.93413426238521"
+    }
+  ],
+  "linkDataArray": [
+    {
+      "to": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+      "from": "4293906f-3cb8-4560-b0cd-f28033878dca",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "to": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+      "from": "e60df9cd-d72a-4504-810c-c46df0ddedae",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "from": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
+      "to": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "from": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+      "to": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "to": "d754ee17-4125-4ff6-bed3-7347d290c1f0",
+      "from": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
+      "frompid": "OUT",
+      "topid": "IN"
+    }
+  ],
   "$schema": "https://s.dev.y42.dev/integrations/ui_model/0.0.0/model.json"
 }
