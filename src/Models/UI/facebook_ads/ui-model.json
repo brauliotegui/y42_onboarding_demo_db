@@ -1,5 +1,192 @@
 {
-  "nodeDataArray": [],
-  "linkDataArray": [],
+  "nodeDataArray": [
+    {
+      "key": "af169a6b-7086-4e53-acf5-f88b158088f3",
+      "type": "INPUT",
+      "category": "INPUT",
+      "transformationStep": {
+        "id": "af169a6b-7086-4e53-acf5-f88b158088f3",
+        "title": "src/Integrations/Facebook_Ads/fb_ads_mock_data.csv",
+        "transformationType": "INPUT",
+        "datasourceName": "Facebook Ads",
+        "transformObject": {
+          "source": "src/Integrations/Facebook_Ads",
+          "table": "src/Integrations/Facebook_Ads/fb_ads_mock_data.csv",
+          "lang": ""
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-352.33348749913665 -122.02196994414378"
+    },
+    {
+      "key": "cfdb8094-30a2-4726-b1e7-8dc2e624fe01",
+      "type": "FIELDS",
+      "category": "FIELDS",
+      "transformationStep": {
+        "id": "cfdb8094-30a2-4726-b1e7-8dc2e624fe01",
+        "title": "",
+        "transformationType": "FIELDS",
+        "transformObject": [
+          {
+            "target": "cost",
+            "source": "spend",
+            "type": "FLOAT",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          }
+        ]
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-107.21584044031312 -120.22605157679683"
+    },
+    {
+      "key": "76a3b969-ec5b-49a1-bf52-f23cb03f6350",
+      "type": "OUTPUT",
+      "category": "OUTPUT",
+      "transformationStep": {
+        "id": "76a3b969-ec5b-49a1-bf52-f23cb03f6350",
+        "title": "facebook_ads",
+        "transformationType": "OUTPUT",
+        "transformObject": {
+          "name": "facebook_ads",
+          "fields": [
+            {
+              "target": "cost",
+              "source": "cost",
+              "type": "FLOAT",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "account_id",
+              "source": "account_id",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "date_start",
+              "source": "date_start",
+              "type": "TIMESTAMP",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "ad_id",
+              "source": "ad_id",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "adset_name",
+              "source": "adset_name",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "campaign_name",
+              "source": "campaign_name",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "clicks",
+              "source": "clicks",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "ctr",
+              "source": "ctr",
+              "type": "FLOAT",
+              "display": false,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "impressions",
+              "source": "impressions",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "reach",
+              "source": "reach",
+              "type": "INTEGER",
+              "display": false,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            }
+          ]
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "131.05126195620102 -121.10995180355425"
+    }
+  ],
+  "linkDataArray": [
+    {
+      "to": "cfdb8094-30a2-4726-b1e7-8dc2e624fe01",
+      "from": "af169a6b-7086-4e53-acf5-f88b158088f3",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "to": "76a3b969-ec5b-49a1-bf52-f23cb03f6350",
+      "from": "cfdb8094-30a2-4726-b1e7-8dc2e624fe01",
+      "frompid": "OUT",
+      "topid": "IN"
+    }
+  ],
   "$schema": "https://s.dev.y42.dev/integrations/ui_model/0.0.0/model.json"
 }
