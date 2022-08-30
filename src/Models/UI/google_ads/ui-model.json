@@ -1,0 +1,214 @@
+{
+  "nodeDataArray": [
+    {
+      "key": "b78c309c-d946-4548-9e19-3e7a6df1f2e4",
+      "type": "INPUT",
+      "category": "INPUT",
+      "transformationStep": {
+        "id": "b78c309c-d946-4548-9e19-3e7a6df1f2e4",
+        "title": "src/Integrations/Google_Ads/google_ads_mock_data.csv",
+        "transformationType": "INPUT",
+        "datasourceName": "Google Ads",
+        "transformObject": {
+          "source": "src/Integrations/Google_Ads",
+          "table": "src/Integrations/Google_Ads/google_ads_mock_data.csv",
+          "lang": ""
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-433 -147.54716981132077"
+    },
+    {
+      "key": "1464962c-ba23-4f66-8f5a-bb73f88f8244",
+      "type": "FIELDS",
+      "category": "FIELDS",
+      "transformationStep": {
+        "id": "1464962c-ba23-4f66-8f5a-bb73f88f8244",
+        "title": "",
+        "transformationType": "FIELDS",
+        "transformObject": [
+          {
+            "target": "expense",
+            "source": "cost",
+            "type": "INTEGER",
+            "display": true,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          }
+        ]
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-192.8099173553719 -146.1320754716981"
+    },
+    {
+      "key": "b318d20b-37f6-442b-8d50-5df7eccde29d",
+      "type": "OUTPUT",
+      "category": "OUTPUT",
+      "transformationStep": {
+        "id": "b318d20b-37f6-442b-8d50-5df7eccde29d",
+        "title": "google_ads",
+        "transformationType": "OUTPUT",
+        "transformObject": {
+          "name": "google_ads",
+          "fields": [
+            {
+              "target": "expense",
+              "source": "expense",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "day",
+              "source": "day",
+              "type": "DATE",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "adid",
+              "source": "adid",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "account",
+              "source": "account",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "adgroup",
+              "source": "adgroup",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "adtype",
+              "source": "adtype",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "campaign",
+              "source": "campaign",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "clicks",
+              "source": "clicks",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "engagements",
+              "source": "engagements",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "impressions",
+              "source": "impressions",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "interactions",
+              "source": "interactions",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "views",
+              "source": "views",
+              "type": "INTEGER",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            }
+          ]
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "48.677685950413206 -151.1320754716981"
+    }
+  ],
+  "linkDataArray": [
+    {
+      "to": "1464962c-ba23-4f66-8f5a-bb73f88f8244",
+      "from": "b78c309c-d946-4548-9e19-3e7a6df1f2e4",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "to": "b318d20b-37f6-442b-8d50-5df7eccde29d",
+      "from": "1464962c-ba23-4f66-8f5a-bb73f88f8244",
+      "frompid": "OUT",
+      "topid": "IN"
+    }
+  ],
+  "$schema": "https://s.dev.y42.dev/integrations/ui_model/0.0.0/model.json"
+}
