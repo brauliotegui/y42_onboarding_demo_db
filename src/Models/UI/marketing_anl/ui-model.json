@@ -17,7 +17,7 @@
       },
       "isGroup": true,
       "group": "",
-      "location": "-736.8272612534258 -227.57564369634747"
+      "location": "0 0"
     },
     {
       "key": "e60df9cd-d72a-4504-810c-c46df0ddedae",
@@ -36,7 +36,7 @@
       },
       "isGroup": true,
       "group": "",
-      "location": "-732.8272612534258 -66.87753048880029"
+      "location": "0 133"
     },
     {
       "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
@@ -81,6 +81,17 @@
             "sourceTypeChanged": false
           },
           {
+            "target": "ctr",
+            "source": "ctr",
+            "type": "FLOAT",
+            "display": false,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          },
+          {
             "target": "cost",
             "source": "spend",
             "type": "FLOAT",
@@ -95,7 +106,7 @@
       },
       "isGroup": true,
       "group": "",
-      "location": "-481.9630637225616 -227.82092671521542"
+      "location": "247 0"
     },
     {
       "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
@@ -132,7 +143,7 @@
       },
       "isGroup": true,
       "group": "",
-      "location": "-486.55565631515424 -67.34922860200788"
+      "location": "247 133"
     },
     {
       "key": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
@@ -144,6 +155,114 @@
         "transformationType": "UNION",
         "transformObject": {
           "fields": [
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "day",
+              "source": "day",
+              "type": "DATE",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "adgroup",
+              "source": "adgroup",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "campaign",
+              "source": "campaign",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "cost",
+              "source": "cost",
+              "type": "NUMERIC",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "account_id",
+              "source": "account_id",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "ad_id",
+              "source": "ad_id",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "clicks",
+              "source": "clicks",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "impressions",
+              "source": "impressions",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "adtype",
+              "source": "adtype",
+              "type": "STRING",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "engagements",
+              "source": "engagements",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "interactions",
+              "source": "interactions",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
+            {
+              "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+              "target": "views",
+              "source": "views",
+              "type": "INTEGER",
+              "display": true,
+              "description": "",
+              "source_alias": ""
+            },
             {
               "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
               "target": "day",
@@ -209,15 +328,6 @@
             },
             {
               "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
-              "target": "ctr",
-              "source": "ctr",
-              "type": "FLOAT",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
               "target": "impressions",
               "source": "impressions",
               "type": "INTEGER",
@@ -233,125 +343,17 @@
               "display": true,
               "description": "",
               "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "day",
-              "source": "day",
-              "type": "DATE",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "adgroup",
-              "source": "adgroup",
-              "type": "STRING",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "campaign",
-              "source": "campaign",
-              "type": "STRING",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "cost",
-              "source": "cost",
-              "type": "INTEGER",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "account_id",
-              "source": "account_id",
-              "type": "STRING",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "ad_id",
-              "source": "ad_id",
-              "type": "STRING",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "clicks",
-              "source": "clicks",
-              "type": "INTEGER",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "impressions",
-              "source": "impressions",
-              "type": "INTEGER",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "adtype",
-              "source": "adtype",
-              "type": "STRING",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "engagements",
-              "source": "engagements",
-              "type": "INTEGER",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "interactions",
-              "source": "interactions",
-              "type": "INTEGER",
-              "display": true,
-              "description": "",
-              "source_alias": ""
-            },
-            {
-              "key": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-              "target": "views",
-              "source": "views",
-              "type": "INTEGER",
-              "display": true,
-              "description": "",
-              "source_alias": ""
             }
           ],
           "tables": [
-            "62ddc904-5d1b-41ea-87c8-b039c238fa8f",
-            "64ac3ff8-6ac1-4bb1-b1dd-46d646679728"
+            "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+            "62ddc904-5d1b-41ea-87c8-b039c238fa8f"
           ]
         }
       },
       "isGroup": true,
       "group": "",
-      "location": "-168.28405137688264 -151.02847388502676"
+      "location": "783 133"
     },
     {
       "key": "d754ee17-4125-4ff6-bed3-7347d290c1f0",
@@ -373,7 +375,7 @@
               "description": "",
               "source_alias": "",
               "applied": false,
-              "sourceTypeChanged": true
+              "sourceTypeChanged": false
             },
             {
               "target": "adgroup",
@@ -406,7 +408,7 @@
               "description": "",
               "source_alias": "",
               "applied": false,
-              "sourceTypeChanged": true
+              "sourceTypeChanged": false
             },
             {
               "target": "account_id",
@@ -434,17 +436,6 @@
               "target": "clicks",
               "source": "clicks",
               "type": "INTEGER",
-              "display": true,
-              "changed": false,
-              "description": "",
-              "source_alias": "",
-              "applied": false,
-              "sourceTypeChanged": false
-            },
-            {
-              "target": "ctr",
-              "source": "ctr",
-              "type": "FLOAT",
               "display": true,
               "changed": false,
               "description": "",
@@ -523,7 +514,26 @@
       },
       "isGroup": true,
       "group": "",
-      "location": "106.90113380830235 -150.93413426238521"
+      "location": "1298 133"
+    },
+    {
+      "key": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+      "type": "FUNCTIONS",
+      "category": "FUNCTIONS",
+      "transformationStep": {
+        "id": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+        "title": "",
+        "transformationType": "FUNCTIONS",
+        "transformObject": [
+          {
+            "target": "cost",
+            "originalString": "CAST_FLOAT(@cost)"
+          }
+        ]
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "515 133"
     }
   ],
   "linkDataArray": [
@@ -546,14 +556,20 @@
       "topid": "IN"
     },
     {
-      "from": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
-      "to": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
+      "to": "d754ee17-4125-4ff6-bed3-7347d290c1f0",
+      "from": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
       "frompid": "OUT",
       "topid": "IN"
     },
     {
-      "to": "d754ee17-4125-4ff6-bed3-7347d290c1f0",
-      "from": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
+      "from": "64ac3ff8-6ac1-4bb1-b1dd-46d646679728",
+      "to": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "from": "445dfaf4-2aca-4fe0-b438-d98004e5fb0d",
+      "to": "9e7242fd-78bb-4d3b-8f59-9d3cedec8d16",
       "frompid": "OUT",
       "topid": "IN"
     }
