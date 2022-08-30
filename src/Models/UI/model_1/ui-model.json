@@ -38,6 +38,28 @@
             "source_alias": "",
             "applied": true,
             "sourceTypeChanged": false
+          },
+          {
+            "target": "interactions",
+            "source": "interactions",
+            "type": "INTEGER",
+            "display": false,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
+          },
+          {
+            "target": "views",
+            "source": "views",
+            "type": "INTEGER",
+            "display": false,
+            "changed": false,
+            "description": "",
+            "source_alias": "",
+            "applied": true,
+            "sourceTypeChanged": false
           }
         ]
       },
