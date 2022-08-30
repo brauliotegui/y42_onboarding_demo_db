@@ -187,28 +187,6 @@
               "source_alias": "",
               "applied": false,
               "sourceTypeChanged": false
-            },
-            {
-              "target": "interactions",
-              "source": "interactions",
-              "type": "INTEGER",
-              "display": true,
-              "changed": false,
-              "description": "",
-              "source_alias": "",
-              "applied": false,
-              "sourceTypeChanged": false
-            },
-            {
-              "target": "views",
-              "source": "views",
-              "type": "INTEGER",
-              "display": true,
-              "changed": false,
-              "description": "",
-              "source_alias": "",
-              "applied": false,
-              "sourceTypeChanged": false
             }
           ]
         }
